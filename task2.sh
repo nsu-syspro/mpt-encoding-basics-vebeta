@@ -3,7 +3,13 @@
 # Вывести время в формате:
 #   15 час/а/ов 23 минут/ы
 
-read -r H M < <(date -d "$*" '+%H %M')
+if [ -n "$*" ]; then
+    TIME_STR="$*"
+else
+    TIME_STR="now"
+fi
+
+read -r H M < <(date -d "$TIME_STR" '+%H %M')
 
 plural() {
     local n=$(( 10#$1 % 100 ))
