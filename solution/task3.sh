@@ -3,6 +3,6 @@
 # Вывести время в формате:
 #   13 октября 2023 года, Пятница
 
-export LC_ALL=ru_RU.utf8
+export LC_ALL=ru_RU.UTF-8
 
-date -d "$*" '+%d %B2 %Y года, %A' | sed -E 's/, ([а-яё])/, \U\1/'
+date -d "$*" '+%d %B %Y года, %A' | sed -E 's/, ([а-яё])/, \U\1/'
