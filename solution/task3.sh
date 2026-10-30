@@ -5,4 +5,4 @@
 
 export LC_ALL=ru_RU.utf8
 
-date -d "$*" '+%d %c %Y года, %A' | sed -E 's/, ([а-яё])/, \U\1/'
+date -d "$*" '+%d %B2 %Y года, %A' | sed -E 's/, ([а-яё])/, \U\1/'
